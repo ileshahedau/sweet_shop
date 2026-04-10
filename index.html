@@ -1,154 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sweet Shop 🍰</title>
+<meta charset="UTF-8">
+<title>Sweet Shop 🍰</title>
 
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            background-color: #fff0f5;
-        }
-        .card img {
-            height: 200px;
-            object-fit: cover;
-        }
-        .navbar {
-            background-color: pink;
-        }
-    </style>
+<style>
+body {
+    background-color: #fff0f5;
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+.navbar {
+    background-color: pink;
+}
+</style>
 </head>
 
 <body>
 
 <!-- 🔹 Navbar -->
 <nav class="navbar navbar-expand-lg">
-    <div class="container d-flex justify-content-between">
+<div class="container d-flex justify-content-between">
 
-        <!-- Shop Name -->
-        <h2>Sweet Shop 🍰</h2>
+<h2>Sweet Shop 🍰</h2>
 
-        <!-- Contact Details -->
-        <div class="text-end">
-            <p style="margin:0;">📞 +91 9876543210</p>
-            <p style="margin:0;">📍 Pune, India</p>
-            <p style="margin:0;">📧 sweetshop@gmail.com</p>
-        </div>
+<div class="text-end">
+<p style="margin:0;">📞 +91 9876543210</p>
+<p style="margin:0;">📍 Pune, India</p>
+<p style="margin:0;">📧 sweetshop@gmail.com</p>
+</div>
 
-    </div>
+<!-- Cart Button -->
+<a href="cart.html" class="btn btn-dark">Cart 🛒</a>
+
+</div>
 </nav>
 
-<!-- 🔹 Cakes Section -->
+<!-- 🔹 Cakes -->
 <div class="container mt-4">
-    <h2 class="text-center">Cakes 🎂</h2>
-    <div class="row">
+<h2 class="text-center">Cakes 🎂</h2>
+<div class="row">
 
-        <!-- Cake 1 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="chocolate.jpg.jpeg" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5>Chocolate Cake</h5>
-                    <p>₹500</p>
-                    <button class="btn btn-danger">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cake 2 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="vanilla.jpg.jpeg" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5>Vanilla Cake</h5>
-                    <p>₹400</p>
-                    <button class="btn btn-danger">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cake 3 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="strawberry.jpg.jpeg" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5>Strawberry Cake</h5>
-                    <p>₹450</p>
-                    <button class="btn btn-danger">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<div class="col-md-4">
+<div class="card">
+<img src="chocolate.jpg.jpeg">
+<div class="card-body text-center">
+<h5>Chocolate Cake</h5>
+<p>₹500</p>
+<button onclick="addToCart('Chocolate Cake',500)" class="btn btn-danger">Add to Cart</button>
+</div>
+</div>
 </div>
 
-<!-- 🔹 Ice Cream Section -->
-<div class="container mt-5">
-    <h2 class="text-center">Ice Creams 🍦</h2>
-    <div class="row">
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="ice1.jpeg" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5>Chocolate Ice Cream</h5>
-                    <p>₹150</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="ice3.jpeg" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5>Vanilla Ice Cream</h5>
-                    <p>₹120</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <img src="ice2.jpeg" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5>Strawberry Ice Cream</h5>
-                    <p>₹130</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<div class="col-md-4">
+<div class="card">
+<img src="vanilla.jpg.jpeg">
+<div class="card-body text-center">
+<h5>Vanilla Cake</h5>
+<p>₹400</p>
+<button onclick="addToCart('Vanilla Cake',400)" class="btn btn-danger">Add to Cart</button>
+</div>
+</div>
 </div>
 
-<!-- 🔹 Customer Section -->
+<div class="col-md-4">
+<div class="card">
+<img src="strawberry.jpg.jpeg">
+<div class="card-body text-center">
+<h5>Strawberry Cake</h5>
+<p>₹450</p>
+<button onclick="addToCart('Strawberry Cake',450)" class="btn btn-danger">Add to Cart</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- 🔹 Ice Cream -->
 <div class="container mt-5">
-    <h2 class="text-center">Our Happy Customers 😊</h2>
-    <div class="row text-center">
+<h2 class="text-center">Ice Creams 🍦</h2>
+<div class="row">
 
-        <div class="col-md-4">
-            <img src="person3.jpeg" width="100" class="rounded-circle">
-            <p>“Best cakes ever!”</p>
-        </div>
+<div class="col-md-4">
+<div class="card">
+<img src="ice1.jpeg">
+<div class="card-body text-center">
+<h5>Chocolate Ice Cream</h5>
+<p>₹150</p>
+<button onclick="addToCart('Chocolate Ice Cream',150)" class="btn btn-danger">Add to Cart</button>
+</div>
+</div>
+</div>
 
-        <div class="col-md-4">
-            <img src="person2.jpeg" width="100" class="rounded-circle">
-            <p>“Loved the ice creams!”</p>
-        </div>
+<div class="col-md-4">
+<div class="card">
+<img src="ice3.jpeg">
+<div class="card-body text-center">
+<h5>Vanilla Ice Cream</h5>
+<p>₹120</p>
+<button onclick="addToCart('Vanilla Ice Cream',120)" class="btn btn-danger">Add to Cart</button>
+</div>
+</div>
+</div>
 
-        <div class="col-md-4">
-            <img src="person1.jpeg" width="100" class="rounded-circle">
-            <p>“Amazing service!”</p>
-        </div>
+<div class="col-md-4">
+<div class="card">
+<img src="ice2.jpeg">
+<div class="card-body text-center">
+<h5>Strawberry Ice Cream</h5>
+<p>₹130</p>
+<button onclick="addToCart('Strawberry Ice Cream',130)" class="btn btn-danger">Add to Cart</button>
+</div>
+</div>
+</div>
 
-    </div>
+</div>
+</div>
+
+<!-- 🔹 Happy Customers -->
+<div class="container mt-5">
+<h2 class="text-center">Our Happy Customers 😊</h2>
+<div class="row text-center">
+
+<div class="col-md-4">
+<img src="person3.jpeg" width="100" class="rounded-circle">
+<p>“Best cakes ever!” ⭐⭐⭐⭐⭐</p>
+</div>
+
+<div class="col-md-4">
+<img src="person2.jpeg" width="100" class="rounded-circle">
+<p>“Loved the ice creams!” ⭐⭐⭐⭐⭐</p>
+</div>
+
+<div class="col-md-4">
+<img src="person1.jpeg" width="100" class="rounded-circle">
+<p>“Amazing service!” ⭐⭐⭐⭐⭐</p>
+</div>
+
+</div>
 </div>
 
 <!-- 🔹 Footer -->
 <footer class="text-center mt-5 p-3 bg-dark text-white">
-    Sweet Shop © 2026
+Sweet Shop © 2026
 </footer>
+
+<!-- 🔹 SCRIPT -->
+<script>
+function addToCart(name, price){
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+cart.push({name:name, price:price});
+localStorage.setItem("cart", JSON.stringify(cart));
+alert(name + " added to cart!");
+}
+</script>
 
 </body>
 </html>
